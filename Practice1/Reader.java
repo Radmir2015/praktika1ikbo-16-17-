@@ -1,0 +1,16 @@
+public class Reader {
+    Book book;
+    int donePages;
+
+    public Reader(Book book, int donePages) {
+        this.book = book;
+        this.donePages = donePages;
+    }
+
+    public void iter() {
+        if (this.donePages >= this.book.getPages())
+            System.out.println("Book: " + this.book.getTitle() + " is read.");
+        else
+            System.out.println("Book: " + this.book.getTitle() + " is in progress (" + ++this.donePages + "/" + this.book.getPages() + ")");
+    }
+}

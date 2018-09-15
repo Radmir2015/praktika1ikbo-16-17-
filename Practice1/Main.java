@@ -1,0 +1,15 @@
+public class Main {
+
+    public static void main(String[] args) {
+        Book b = new Book("Great title", "me", 2);
+        Book a = new Book("Yet Another Great Title", "YAGT", 3);
+        System.out.println(b.getInfo());
+        System.out.println(a.getInfo());
+
+        System.out.println(a.add(b).getInfo());
+
+        Reader reader = new Reader(a, 4);
+        reader.iter();
+        reader.iter();
+    }
+}
